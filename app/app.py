@@ -4,10 +4,14 @@ import pandas as pd
 from matplotlib import pyplot as plt
 from sklearn import preprocessing
 
-# Reading (localhost is changed to db) 
+# Reading (db - container name)
+# Graphics aren't showed in container so if you want to see them:
+# change 'db' to localhost 
+# install all dependecies
+# run this file like python <file_path>
 con_string = 'postgresql://postgres@db:5432/data_db'
 engine = create_engine(con_string)
-data = pd.read_sql_query('select * from "bg_statistic"',con=engine)
+data = pd.read_sql_query('select * from "bg_statistic"', con=engine)
 
 print("First five rows:")
 print(data.head())
