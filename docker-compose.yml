@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: test-postgre
+    ports:
+      - 5432:5432
+  app:
+    image: test-python
+    environment:
+      POSTGRES_HOST: db
+    links:
+      - db
