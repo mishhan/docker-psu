@@ -3,8 +3,7 @@
 ## Task
 
 1.  Create a postgres image with fullfield database
-2.  Create a python image with a machine learning library
-3.  Create a python image with a machine learning library which uses as a dataset a table / database tables from the first image and gives the result of machine learning on screen
+2.  Create a python image with a machine learning library which uses as a dataset a table / database tables from the first image and gives the result of machine learning on screen
 4.  Create a **_compose_** file that includes a description of 2 services based on the created images
 5.  Run the script from the second image to demonstrate the results
 
