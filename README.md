@@ -11,23 +11,31 @@
 ## Solution
 
 `git clone https://github.com/mishhan/docker-psu.git`
+
 `cd docker-psu`
 
 ### Database image
 
 Data - https://www.kaggle.com/cblesa/world-of-warcraft-battlegrounds
+
 `cd db`
+
 `[sudo] docker build -t test-postgre .`
 
 [Dockerfile](./db/Dockerfile)
+
 `COPY ./init /docker-entrypoint-initdb.d`
+
 [See here](https://hub.docker.com/_/postgres) - Initialization scripts
+
 The same as: `psql -U postgres -d data_db -f db.sql`
 
 ### App image
 
 `cd .. --step back in docker-psu`
+
 `cd app`
+
 `[sudo] docker build -t test-python .`
 
 [Dockerfile](./app/Dockerfile)
